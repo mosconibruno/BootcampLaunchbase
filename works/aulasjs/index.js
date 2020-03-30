@@ -71,7 +71,7 @@ function sendFlunkedMessage(student) {
     }
 }
 
-function studentsReprovados(students) {
+function studentsFlunked(students) {
     for (let student of students) {
         markAsFlunked(student)
         sendFlunkedMessage(student)
@@ -84,5 +84,5 @@ const average2 = calculateAverage(classB)
 sendMessage(average1, 'A')
 sendMessage(average2, 'B')
 
-studentsReprovados(classA)
-studentsReprovados(classB)
+studentsFlunked(classA)
+studentsFlunked(classB)
